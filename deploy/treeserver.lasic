@@ -1,0 +1,30 @@
+system "lucid-familiytree" {
+
+  abstract node "base-vm" {
+     props {
+      groups: "default"
+      key: "default"
+      instancetype: "micro"
+      count: 1 
+//      machineimage: "ami-ccf405a5"
+//      machineimage: "ami-3e02f257"
+//      machineimage: "ami-508c7839"
+//      machineimage: "ami-1a837773"
+//        machineimage: "ami-a6f504cf"
+        machineimage: "ami-cef405a7"
+      user: "ubuntu"
+    }
+ }
+
+  node "web-app" extends "base-vm" {
+    action "install" {
+      scp {
+        "file:install.sh":"~/install.sh"
+      }
+      scripts {
+        "~/install.sh": {} 
+      }   
+    } 
+  } 
+}
+
