@@ -24,3 +24,15 @@ apt-get -y install openjdk-6-jdk
 
 echo "********** Installing tomcat **********" 
 apt-get -y install tomcat6 tomcat6-common
+
+echo "" 
+echo "********** Installing web-app **********" 
+cp /home/ubuntu/treeserver.war /var/lib/tomcat6/webapps
+
+echo "********** restarting tomcat  **********" 
+/etc/init.d/tomcat6 restart
+
+echo "" 
+echo "********** Completed Installation of treeserver; `date` **********" 
+echo "" 
+echo ""

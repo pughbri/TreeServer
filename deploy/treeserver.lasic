@@ -20,6 +20,7 @@ system "lucid-familiytree" {
     action "install" {
       scp {
         "file:install.sh":"~/install.sh"
+        "file:../target/TreeServer-1.0-SNAPSHOT.war":"~/treeserver.war"
       }
       scripts {
         "~/install.sh": {} 

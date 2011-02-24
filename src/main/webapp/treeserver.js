@@ -10,8 +10,9 @@ $('#get-tree-data').live('mouseup',storeSession);
 function storeSession(e) {
   var session = $('#session-id')[0].value;
   var person = $('#person-id').get(0).value;
-  $('body').append("<script src='http://ec2-50-16-101-127.compute-1.amazonaws.com/getdata.js" + "?session=" + session + "&person=" + person + "'></script>");
+  $('body').append("<script src='http://ec2-50-16-100-28.compute-1.amazonaws.com:8080/treeserver/person/loadtree.js" + "?sessionid=" + session + "&personid=" + person + "'></script>");
 //  alert('Do it!');
 }
 
 //javascript:(function(){self.opener.location='javascript:(function(){document.body.appendChild(document.createElement(\'script\')).src=\'http://ec2-50-16-101-127.compute-1.amazonaws.com/test2.js\';})()';self.close();})(
+//javascript:(function(){self.opener.location='javascript:(function(){document.body.appendChild(document.createElement(\'script\')).src=\'http://ec2-50-16-100-28.compute-1.amazonaws.com:8080/treeserver/treeserver.js\';})()';self.close();})()
