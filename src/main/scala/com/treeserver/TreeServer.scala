@@ -17,8 +17,13 @@ class TreeServer extends ScalatraServlet {
     out.write("alert(\"Got personid and session: " + params("personid") + " " + params("sessionid") + "\");")
     out.write("alert(\"" + person.toString + "\");")
 //    out.write("var viewport = $('.viewport>div:nth-child(4)');")
-    out.write("$('#SuperCanvas93466456194631705355201>div:nth-child(3)>canvas')[0].hide();") //hide canvas tag that displays name
-    out.write("$('<div>" + person.name + "</div>').appendTo('#SuperCanvas93466456194631705355201>div:nth-child(3)');") //add text tag that displays name
+    //out.write("$('#SuperCanvas93466456194631705355201>div:nth-child(3)>canvas')[0].hide();") //hide canvas tag that displays name
+    //out.write("$('<div>" + person.name + "</div>').appendTo('#SuperCanvas93466456194631705355201>div:nth-child(3)');") //add text tag that displays name
+    out.write("$(\'<div>" + person.name +  "</div>\').appendTo(\'.viewport>div:nth-child(4)>div:nth-child(32)>div>div:nth-child(3)\');$(\'.viewport>div:nth-child(4)>div:nth-child(32)>div>div:nth-child(3)>canvas\').hide();")
+    out.write("$(\'<div>" + person.mother.name +  "</div>\').appendTo(\'.viewport>div:nth-child(4)>div:nth-child(33)>div>div:nth-child(3)\');$(\'.viewport>div:nth-child(4)>div:nth-child(33)>div>div:nth-child(3)>canvas\').hide();")
+    out.write("$(\'<div>" + person.father.name +  "</div>\').appendTo(\'.viewport>div:nth-child(4)>div:nth-child(34)>div>div:nth-child(3)\');$(\'.viewport>div:nth-child(4)>div:nth-child(34)>div>div:nth-child(3)>canvas\').hide();")
+    out.write("$(\'<div>" + person.mother.mother.name +  "</div>\').appendTo(\'.viewport>div:nth-child(4)>div:nth-child(35)>div>div:nth-child(3)\');$(\'.viewport>div:nth-child(4)>div:nth-child(35)>div>div:nth-child(3)>canvas\').hide();")
+    out.write("$(\'<div>" + person.mother.father.name +  "</div>\').appendTo(\'.viewport>div:nth-child(4)>div:nth-child(36)>div>div:nth-child(3)\');$(\'.viewport>div:nth-child(4)>div:nth-child(36)>div>div:nth-child(3)>canvas\').hide();")
 
   }
 }
