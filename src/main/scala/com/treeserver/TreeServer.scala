@@ -16,6 +16,10 @@ class TreeServer extends ScalatraServlet {
     val out = response.getWriter
     out.write("alert(\"Got personid and session: " + params("personid") + " " + params("sessionid") + "\");")
     out.write("alert(\"" + person.toString + "\");")
+//    out.write("var viewport = $('.viewport>div:nth-child(4)');")
+    out.write("$('#SuperCanvas93466456194631705355201>div:nth-child(3)>canvas')[0].hide();") //hide canvas tag that displays name
+    out.write("$('<div>" + person.name + "</div>').appendTo('#SuperCanvas93466456194631705355201>div:nth-child(3)');") //add text tag that displays name
+
   }
 }
 

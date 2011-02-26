@@ -16,3 +16,9 @@ function storeSession(e) {
 
 //javascript:(function(){self.opener.location='javascript:(function(){document.body.appendChild(document.createElement(\'script\')).src=\'http://ec2-50-16-101-127.compute-1.amazonaws.com/test2.js\';})()';self.close();})(
 //javascript:(function(){self.opener.location='javascript:(function(){document.body.appendChild(document.createElement(\'script\')).src=\'http://ec2-50-16-100-28.compute-1.amazonaws.com:8080/treeserver/treeserver.js\';})()';self.close();})()
+
+//javascript:(function(){self.opener.location='javascript:(function(){$(\'<div> TEST</div>\').appendTo(\'#SuperCanvas93466456194631705355201>div:nth-child(3)\');})()';self.close();})()
+//javascript:(function(){self.opener.location='javascript:(function(){$(\'<div> TEST</div>\').appendTo(\'#SuperCanvas93466456194631705355201>div:nth-child(3)\');})()';self.close();})()
+
+
+//this works:  need to get rid of hard coded id.  javascript:(function(){self.opener.location='javascript:(function(){$(\'<div> TEST</div>\').appendTo(\'#SuperCanvas447013827846487342762188>div:nth-child(3)\');$(\'#SuperCanvas447013827846487342762188>div:nth-child(3)>canvas\').hide();})()';})()
